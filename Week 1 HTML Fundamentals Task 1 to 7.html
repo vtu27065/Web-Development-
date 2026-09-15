@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 Assignment - HTML Fundamentals</title>
+</head>
+<body>
+
+<header>
+    <h1>Week 1 Assignment: HTML Fundamentals</h1>
+    <p><strong>Student Name:</strong> Your Name</p>
+    <p><strong>Course:</strong> Web Development</p>
+</header>
+
+<hr>
+
+<nav>
+    <h2>Assignment Navigation</h2>
+    <a href="#task1">Task 1</a> |
+    <a href="#task2">Task 2</a> |
+    <a href="#task3">Task 3</a> |
+    <a href="#task4">Task 4</a> |
+    <a href="#task5">Task 5</a> |
+    <a href="#task6">Task 6</a> |
+    <a href="#task7">Task 7</a>
+</nav>
+
+<hr>
+
+<main>
+
+<section id="task1">
+    <h2>Task 1: HTML Document Structure</h2>
+    <p>This webpage demonstrates the basic structure of an HTML5 document. It contains the HTML5 declaration, html, head, body, title, meta charset, and meta viewport elements.</p>
+    <p>HTML stands for <strong>HyperText Markup Language</strong>. It is used to create and structure content on webpages.</p>
+</section>
+
+<hr>
+
+<section id="task2">
+    <h2>Task 2: Text Formatting &amp; Basic Elements</h2>
+
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <h3>Paragraphs</h3>
+    <p>HTML is the standard markup language used to create webpages. It provides the basic structure of a webpage using different elements.</p>
+    <p>Learning HTML is the first step toward becoming a web developer.</p>
+
+    <h3>Text Formatting</h3>
+    <p><b>This text is bold.</b></p>
+    <p><i>This text is italic.</i></p>
+    <p><u>This text is underlined.</u></p>
+    <p><strong>Strong text</strong> and <em>emphasized text</em> can also be used.</p>
+
+    <h3>Line Break</h3>
+    <p>HTML is easy to learn.<br>HTML is used to structure webpages.<br>HTML works together with CSS and JavaScript.</p>
+
+    <h3>Horizontal Line</h3>
+    <p>This is a horizontal line:</p>
+    <hr>
+
+    <h3>Superscript and Subscript</h3>
+    <p>Water formula: H<sub>2</sub>O</p>
+    <p>Einstein's famous equation: E = mc<sup>2</sup></p>
+
+    <!-- This is an HTML comment. Comments are not displayed in the browser. -->
+</section>
+
+<hr>
+
+<section id="task3">
+    <h2>Task 3: Links, Images, Lists &amp; Tables</h2>
+
+    <h3>Internal Hyperlink</h3>
+    <p><a href="#task4">Go to Student Registration Form</a></p>
+
+    <h3>External Hyperlink</h3>
+    <p><a href="https://www.google.com" target="_blank">Visit Google</a></p>
+    <p><a href="https://www.w3schools.com" target="_blank">Visit W3Schools</a></p>
+
+    <h3>Image with Alternate Text</h3>
+    <img src="https://via.placeholder.com/500x250" alt="Sample webpage image" width="500">
+    <p>The image above contains alternate text using the <strong>alt</strong> attribute.</p>
+
+    <h3>Ordered List</h3>
+    <ol>
+        <li>Learn HTML</li>
+        <li>Practice HTML</li>
+        <li>Create Webpages</li>
+        <li>Test the Webpages</li>
+    </ol>
+
+    <h3>Unordered List</h3>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Database</li>
+    </ul>
+
+    <h3>Nested List</h3>
+    <ul>
+        <li>Frontend Development
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </li>
+        <li>Backend Development
+            <ul>
+                <li>Python</li>
+                <li>Java</li>
+                <li>PHP</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Student Course Table</h3>
+    <table border="1">
+        <tr>
+            <th>S.No</th>
+            <th>Student Name</th>
+            <th>Course</th>
+            <th>Duration</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Rahul</td>
+            <td>Web Development</td>
+            <td>6 Months</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Priya</td>
+            <td>Python</td>
+            <td>4 Months</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Anjali</td>
+            <td>Java</td>
+            <td>6 Months</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Arun</td>
+            <td>Data Science</td>
+            <td>8 Months</td>
+        </tr>
+    </table>
+</section>
+
+<hr>
+
+<section id="task4">
+    <h2>Task 4: Student Registration Form</h2>
+
+    <form>
+        <fieldset>
+            <legend><strong>Student Registration</strong></legend>
+
+            <p>
+                <label for="name">Full Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </p>
+
+            <p>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </p>
+
+            <p>
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="Enter phone number">
+            </p>
+
+            <p>
+                <strong>Gender:</strong><br>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other">Other</label>
+            </p>
+
+            <p>
+                <label for="dob">Date of Birth:</label><br>
+                <input type="date" id="dob" name="dob">
+            </p>
+
+            <p>
+                <label for="course">Select Course:</label><br>
+                <select id="course" name="course">
+                    <option value="">-- Select Course --</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="python">Python Programming</option>
+                    <option value="java">Java Programming</option>
+                    <option value="data-science">Data Science</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="address">Address:</label><br>
+                <textarea id="address" name="address" rows="5" cols="40" placeholder="Enter your address"></textarea>
+            </p>
+
+            <p>
+                <strong>Skills / Interests:</strong><br>
+                <input type="checkbox" id="html" name="skills" value="HTML">
+                <label for="html">HTML</label><br>
+                <input type="checkbox" id="css" name="skills" value="CSS">
+                <label for="css">CSS</label><br>
+                <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+                <label for="javascript">JavaScript</label><br>
+                <input type="checkbox" id="python" name="skills" value="Python">
+                <label for="python">Python</label>
+            </p>
+
+            <p>
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the terms and conditions.</label>
+            </p>
+
+            <p>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </p>
+        </fieldset>
+    </form>
+</section>
+
+<hr>
+
+<section id="task5">
+    <h2>Task 5: Semantic HTML</h2>
+
+    <article>
+        <h3>Understanding Semantic HTML</h3>
+        <p>Semantic HTML elements clearly describe their meaning and purpose to both browsers and developers.</p>
+        <p>Examples include header, nav, main, section, article, and footer.</p>
+    </article>
+
+    <section>
+        <h3>Semantic Elements Used in This Page</h3>
+        <ul>
+            <li><strong>Header:</strong> Contains the introductory information.</li>
+            <li><strong>Nav:</strong> Contains navigation links.</li>
+            <li><strong>Main:</strong> Contains the main webpage content.</li>
+            <li><strong>Section:</strong> Groups related content.</li>
+            <li><strong>Article:</strong> Contains independent content.</li>
+            <li><strong>Footer:</strong> Contains closing information.</li>
+        </ul>
+    </section>
+</section>
+
+<hr>
+
+<section id="task6">
+    <h2>Task 6: Mini HTML Project</h2>
+
+    <article>
+        <h3>Student Learning Portal</h3>
+
+        <p>Welcome to the Student Learning Portal. This mini project combines the HTML concepts learned during Week 1.</p>
+
+        <h4>About the Portal</h4>
+        <p>The Student Learning Portal provides students with information about courses, skills, learning resources, and registration.</p>
+
+        <h4>Popular Courses</h4>
+        <ul>
+            <li>Web Development</li>
+            <li>Python Programming</li>
+            <li>Java Programming</li>
+            <li>Data Science</li>
+        </ul>
+
+        <h4>Learning Steps</h4>
+        <ol>
+            <li>Register for a course.</li>
+            <li>Attend classes.</li>
+            <li>Complete assignments.</li>
+            <li>Build projects.</li>
+            <li>Improve your skills.</li>
+        </ol>
+
+        <h4>Course Information</h4>
+        <table border="1">
+            <tr>
+                <th>Course</th>
+                <th>Level</th>
+                <th>Duration</th>
+            </tr>
+            <tr>
+                <td>HTML &amp; Web Development</td>
+                <td>Beginner</td>
+                <td>3 Months</td>
+            </tr>
+            <tr>
+                <td>Python Programming</td>
+                <td>Beginner</td>
+                <td>4 Months</td>
+            </tr>
+            <tr>
+                <td>Java Programming</td>
+                <td>Intermediate</td>
+                <td>6 Months</td>
+            </tr>
+        </table>
+
+        <h4>Useful Learning Link</h4>
+        <p>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+                Learn HTML on MDN Web Docs
+            </a>
+        </p>
+
+        <h4>Student Registration</h4>
+        <p>Students can use the <a href="#task4">registration form</a> above to register for a course.</p>
+    </article>
+</section>
+
+<hr>
+
+<section id="task7">
+    <h2>Task 7: Reflection &amp; Learning</h2>
+
+    <article>
+        <h3>My HTML Learning Reflection</h3>
+        <p>
+            During Week 1, I learned the fundamentals of HTML and understood how webpages are structured using HTML5.
+            I learned how to create a proper HTML document using the DOCTYPE declaration, html, head, and body elements.
+            I also learned how to use headings, paragraphs, text formatting, links, images, lists, tables, and forms.
+            The most challenging topic for me was creating the student registration form because it required different
+            input types, radio buttons, checkboxes, dropdown menus, and text areas. I enjoyed learning about hyperlinks,
+            images, and lists because they made the webpage more interactive and organized. I also learned about semantic
+            HTML elements such as header, nav, main, section, article, and footer. These elements help organize webpage
+            content clearly and make the structure easier to understand. HTML will help me in learning web development
+            because it provides the basic structure of every webpage. In the future, I can combine HTML with CSS for
+            designing webpages and JavaScript for adding functionality. Overall, this assignment helped me gain confidence
+            in creating webpages from scratch.
+        </p>
+    </article>
+</section>
+
+</main>
+
+<hr>
+
+<footer>
+    <h3>Week 1 HTML Fundamentals Assignment</h3>
+    <p>Created by: <strong>Your Name</strong></p>
+    <p>Web Development Internship - Week 1</p>
+    <p>&copy; 2026 Student Learning Portal</p>
+</footer>
+
+</body>
+</html>
