@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 CSS Fundamentals - All Tasks</title>
+
+    <style>
+        /* =====================================================
+           WEEK 2 CSS FUNDAMENTALS - ALL TASKS IN ONE FILE
+           ===================================================== */
+
+        /* Universal Selector */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Element Selector */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #f4f7fb;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #173b72, #2878c8);
+            color: white;
+            padding: 35px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.4rem;
+            margin-bottom: 8px;
+        }
+
+        /* Navigation - Flexbox */
+        nav {
+            background: #102a4c;
+            padding: 14px;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .nav-list a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* ID Selector */
+        #main-title {
+            color: #173b72;
+            text-align: center;
+        }
+
+        /* Sections */
+        .section {
+            margin: 40px 0;
+        }
+
+        .section-title {
+            color: #173b72;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.9rem;
+        }
+
+        /* Task 1 */
+        .intro-text {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 12px;
+            border-left: 5px solid #f0ad00;
+            margin: 15px 0;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        /* Task 2 - Box Model */
+        .box {
+            width: 100%;
+            min-height: 150px;
+            margin: 20px 0;
+            padding: 25px;
+            border: 3px solid #2878c8;
+            border-radius: 14px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Task 3 - Flexbox */
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .flex-card {
+            flex: 1 1 250px;
+            padding: 22px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+            text-align: center;
+        }
+
+        /* Task 4 - Grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+        }
+
+        .grid-item {
+            padding: 25px;
+            background: white;
+            border: 1px solid #d7e0ea;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .grid-item.featured {
+            grid-column: span 2;
+        }
+
+        /* Task 6 - Mini Project */
+        .project-card {
+            background: white;
+            padding: 28px;
+            border-radius: 16px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-top: 25px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e8f1ff;
+            color: #173b72;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background: #2878c8;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: #102a4c;
+            color: white;
+            text-align: center;
+        }
+
+        /* Tablet Media Query */
+        @media (max-width: 800px) {
+            header h1 {
+                font-size: 1.9rem;
+            }
+
+            .grid-container,
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .grid-item.featured {
+                grid-column: span 2;
+            }
+
+            .nav-list {
+                gap: 15px;
+            }
+        }
+
+        /* Mobile Media Query */
+        @media (max-width: 600px) {
+            .container {
+                width: 94%;
+            }
+
+            header {
+                padding: 25px 0;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .nav-list {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .box {
+                padding: 18px;
+                margin: 15px 0;
+            }
+
+            .grid-container,
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-item.featured {
+                grid-column: span 1;
+            }
+
+            .flex-container {
+                flex-direction: column;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <h1>Week 2 Assignment: CSS Fundamentals</h1>
+        <p>All Six Tasks in One HTML File</p>
+    </div>
+</header>
+
+<nav>
+    <ul class="nav-list">
+        <li><a href="#task1">Task 1</a></li>
+        <li><a href="#task2">Task 2</a></li>
+        <li><a href="#task3">Task 3</a></li>
+        <li><a href="#task4">Task 4</a></li>
+        <li><a href="#task5">Task 5</a></li>
+        <li><a href="#task6">Task 6</a></li>
+    </ul>
+</nav>
+
+<main class="container">
+
+    <!-- =====================================================
+         TASK 1
+         ===================================================== -->
+    <section id="task1" class="section">
+        <h2 class="section-title">Task 1: Introduction to CSS & Selectors</h2>
+
+        <div class="intro-text">
+            <h3 id="main-title">CSS Syntax and Selectors</h3>
+            <br>
+
+            <p>
+                CSS means Cascading Style Sheets. CSS is used to control
+                the appearance, colors, fonts, spacing, and layout of HTML webpages.
+            </p>
+
+            <p class="highlight">
+                <strong>CSS Syntax Example:</strong>
+                selector { property: value; }
+            </p>
+
+            <h3>Selectors Demonstrated</h3>
+            <br>
+
+            <p>
+                <strong>Element Selector:</strong>
+                The body, header, nav, paragraph, and heading elements
+                are styled directly using element selectors.
+            </p>
+
+            <p class="highlight">
+                <strong>Class Selector:</strong>
+                This paragraph uses the <strong>.highlight</strong> class selector.
+            </p>
+
+            <p>
+                <strong>ID Selector:</strong>
+                The heading above uses the <strong>#main-title</strong> ID selector.
+            </p>
+
+            <p>
+                <strong>Universal Selector:</strong>
+                The <strong>*</strong> selector is used to set
+                box-sizing, margin, and padding.
+            </p>
+
+            <br>
+
+            <div class="center">
+                <h3>Colors, Backgrounds & Font Styling</h3>
+                <p>
+                    CSS is used here for text colors, backgrounds,
+                    font family, font size, font weight, and text alignment.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =====================================================
+         TASK 2
+         ===================================================== -->
+    <section id="task2" class="section">
+        <h2 class="section-title">Task 2: CSS Box Model & Styling</h2>
+
+        <div class="box">
+            <h3>Box Model Demonstration</h3>
+            <br>
+            <p>
+                This box demonstrates width, height, margin, padding,
+                border, border-radius, box-shadow, and content alignment.
+            </p>
+        </div>
+
+        <div class="box center">
+            <h3>Spacing and Alignment</h3>
+            <br>
+            <p><strong>Content:</strong> The text inside the element.</p>
+            <p><strong>Padding:</strong> Space between content and border.</p>
+            <p><strong>Border:</strong> The visible edge around the element.</p>
+            <p><strong>Margin:</strong> Space outside the border.</p>
+        </div>
+
+        <div class="box">
+            <h3>Clean and Organized Layout</h3>
+            <br>
+            <p>
+                Rounded corners, shadows, consistent spacing,
+                and alignment create a clean webpage layout.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- =====================================================
+         TASK 3
+         ===================================================== -->
+    <section id="task3" class="section">
+        <h2 class="section-title">Task 3: Flexbox Layout</h2>
+
+        <p class="center">
+            The following cards demonstrate a Flexbox container,
+            flex direction, justify-content, align-items, gap,
+            flex items, and responsive alignment.
+        </p>
+
+        <br>
+
+        <section class="flex-container">
+
+            <article class="flex-card">
+                <h3>HTML</h3>
+                <br>
+                <p>
+                    HTML provides the basic structure and content
+                    of a webpage.
+                </p>
+            </article>
+
+            <article class="flex-card">
+                <h3>CSS</h3>
+                <br>
+                <p>
+                    CSS provides colors, fonts, spacing,
+                    styling, and page layouts.
+                </p>
+            </article>
+
+            <article class="flex-card">
+                <h3>Responsive Design</h3>
+                <br>
+                <p>
+                    Responsive design allows webpages to adapt
+                    to different screen sizes.
+                </p>
+            </article>
+
+        </section>
+
+        <div class="box">
+            <h3>Flexbox Properties Used</h3>
+            <br>
+            <p>
+                display: flex;
+            </p>
+            <p>
+                flex-direction: row;
+            </p>
+            <p>
+                justify-content: center;
+            </p>
+            <p>
+                align-items: stretch;
+            </p>
+            <p>
+                gap: 20px;
+            </p>
+            <p>
+                flex-wrap: wrap;
+            </p>
+        </div>
+    </section>
+
+
+    <!-- =====================================================
+         TASK 4
+         ===================================================== -->
+    <section id="task4" class="section">
+        <h2 class="section-title">Task 4: CSS Grid Layout</h2>
+
+        <p class="center">
+            This section demonstrates CSS Grid rows, columns,
+            gaps, grid item placement, and a multiple-column layout.
+        </p>
+
+        <br>
+
+        <section class="grid-container">
+
+            <article class="grid-item featured">
+                <h3>Featured Grid Item</h3>
+                <br>
+                <p>
+                    This item spans two columns using
+                    the grid-column property.
+                </p>
+            </article>
+
+            <article class="grid-item">
+                <h3>Item 2</h3>
+                <br>
+                <p>Grid content.</p>
+            </article>
+
+            <article class="grid-item">
+                <h3>Item 3</h3>
+                <br>
+                <p>Grid content.</p>
+            </article>
+
+            <article class="grid-item">
+                <h3>Item 4</h3>
+                <br>
+                <p>Grid content.</p>
+            </article>
+
+            <article class="grid-item">
+                <h3>Item 5</h3>
+                <br>
+                <p>Grid content.</p>
+            </article>
+
+        </section>
+    </section>
+
+
+    <!-- =====================================================
+         TASK 5
+         ===================================================== -->
+    <section id="task5" class="section">
+        <h2 class="section-title">Task 5: Responsive Design using Media Queries</h2>
+
+        <div class="box">
+            <h3>Responsive Webpage</h3>
+            <br>
+            <p>
+                Resize the browser window to see this webpage adapt
+                to desktop, tablet, and mobile screen sizes.
+            </p>
+        </div>
+
+        <section class="flex-container">
+
+            <article class="flex-card">
+                <h3>Desktop</h3>
+                <br>
+                <p>
+                    Large screens can display multiple cards
+                    in a row.
+                </p>
+            </article>
+
+            <article class="flex-card">
+                <h3>Tablet</h3>
+                <br>
+                <p>
+                    Medium screens reduce columns and adjust
+                    spacing for better readability.
+                </p>
+            </article>
+
+            <article class="flex-card">
+                <h3>Mobile</h3>
+                <br>
+                <p>
+                    Small screens stack content vertically
+                    for easy reading and navigation.
+                </p>
+            </article>
+
+        </section>
+
+        <div class="box">
+            <h3>Media Query Features</h3>
+            <br>
+            <p>
+                Font sizes, navigation direction, grid columns,
+                flex direction, spacing, and card arrangement
+                are adjusted using CSS media queries.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- =====================================================
+         TASK 6
+         ===================================================== -->
+    <section id="task6" class="section">
+
+        <h2 class="section-title">Task 6: Mini CSS Project</h2>
+
+        <div class="project-card">
+
+            <span class="badge">MINI CSS PROJECT</span>
+
+            <h2 id="main-title">Student Learning Hub</h2>
+
+            <br>
+
+            <p>
+                This mini project combines all the concepts covered
+                in Week 2: CSS selectors, styling, Box Model,
+                Flexbox, CSS Grid, and responsive Media Queries.
+            </p>
+
+            <div class="project-grid">
+
+                <article class="grid-item">
+                    <h3>HTML Fundamentals</h3>
+                    <br>
+                    <p>
+                        Build a strong foundation with semantic HTML
+                        elements and webpage structure.
+                    </p>
+                    <br>
+                    <button>Learn More</button>
+                </article>
+
+                <article class="grid-item">
+                    <h3>CSS Styling</h3>
+                    <br>
+                    <p>
+                        Use selectors, colors, fonts, borders,
+                        spacing, backgrounds, and shadows.
+                    </p>
+                    <br>
+                    <button>Learn More</button>
+                </article>
+
+                <article class="grid-item">
+                    <h3>Flexbox</h3>
+                    <br>
+                    <p>
+                        Create flexible one-dimensional layouts
+                        with alignment and gaps.
+                    </p>
+                    <br>
+                    <button>Learn More</button>
+                </article>
+
+                <article class="grid-item">
+                    <h3>CSS Grid</h3>
+                    <br>
+                    <p>
+                        Create structured two-dimensional layouts
+                        using rows and columns.
+                    </p>
+                    <br>
+                    <button>Learn More</button>
+                </article>
+
+                <article class="grid-item">
+                    <h3>Responsive Design</h3>
+                    <br>
+                    <p>
+                        Make websites usable on desktop,
+                        tablet, and mobile devices.
+                    </p>
+                    <br>
+                    <button>Learn More</button>
+                </article>
+
+                <article class="grid-item">
+                    <h3>Practice</h3>
+                    <br>
+                    <p>
+                        Combine all CSS concepts into a clean,
+                        organized, and responsive website.
+                    </p>
+                    <br>
+                    <button>Learn More</button>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>Week 2 CSS Fundamentals - All Tasks Completed</p>
+    <p>Student: Chadive Gayani</p>
+</footer>
+
+</body>
+</html>
